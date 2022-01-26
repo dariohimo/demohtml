@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 h1 {
   color: red;
 }
@@ -6,4 +12,59 @@ p {
   background-color: orange;
 }
 
+header {
+  width: 100%;
+  height: 80px;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: repeat(8,1fr); /* 8 columnas de misma ancho */
+  background-color: burlywood;
+  height: 70px;
+  align-items: center;
+  width: 100%;
+  position: fixed;   /*z-index todo con valores posicion absuluta, relativa o fixed.*/
+  
+}
+
+.hero__titulo {
+  grid-column: 2/3;
+
+
+}
+.nav__container {
+    grid-column: 5/8;
+    /*flex ul li */
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    justify-content: space-around;
+
+}
+.nav__container a {
+  text-decoration: none;
+  color: aliceblue;
+  background-color: aquamarine;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.nav__container a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+.nav__container a:hover {
+  background-color: rgb(12, 8, 15);
+  color:chartreuse;
+}
+
+.nav__container a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
 
